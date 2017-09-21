@@ -1,0 +1,9 @@
+<suite name="IOSWeb" parallel="" thread-count="10" verbose="1">
+    <tests>
+        <test name="IOS Web">
+            <classes>
+                <class name="IOSWebPOC"/>
+            </classes>
+        </test>
+    </tests>
+</suite>

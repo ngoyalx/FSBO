@@ -1,0 +1,9 @@
+<suite name="IOSNative" parallel="" thread-count="10" verbose="1">
+    <tests>
+        <test name="IOS Native">
+            <classes>
+                <class name="IOSNativePOC"/>
+            </classes>
+        </test>
+    </tests>
+</suite>

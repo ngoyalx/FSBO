@@ -1,0 +1,9 @@
+<suite name="Android Web" parallel="" thread-count="10" verbose="1">
+    <tests>
+        <test name="Android Google chrome">
+            <classes>
+                <class name="AndroidWebPOC"/>
+            </classes>
+        </test>
+    </tests>
+</suite>

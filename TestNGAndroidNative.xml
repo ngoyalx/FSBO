@@ -1,0 +1,9 @@
+<suite name="Android Native" parallel="" thread-count="10" verbose="1">
+    <tests>
+        <test name="Cheapoair Android">
+            <classes>
+                <class name="AndroidNativePOC"/>
+            </classes>
+        </test>
+    </tests>
+</suite>
