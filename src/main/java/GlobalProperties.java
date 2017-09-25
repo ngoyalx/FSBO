@@ -50,7 +50,9 @@ public class GlobalProperties {
 
         propertyMap = new HashMap<String, String>();
 
-        remoteAppDir = new File(FileSeperator.get() + "Users" + FileSeperator.get() + "Shared" + FileSeperator.get() + "testApps" + FileSeperator.get());
+        remoteAppDir = new File(System.getProperty("user.dir") + FileSeperator.get() + "src"
+                + FileSeperator.get() + "main" + FileSeperator.get() + "resources" + FileSeperator.get()
+                + "apps" + FileSeperator.get());
 
         localAppDir = new File(System.getProperty("user.dir") + FileSeperator.get() + "src"
                 + FileSeperator.get() + "main" + FileSeperator.get() + "resources" + FileSeperator.get()

@@ -4,6 +4,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -88,6 +90,7 @@ public class DriverFactory {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
         capabilities.setCapability(MobileCapabilityType.APP, IOSNativeappPath.getAbsolutePath());
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, GlobalProperties.getPropertyMap().get("iosDeviceName"));
+        //capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"XCUITest");
         return capabilities;
     }
 
