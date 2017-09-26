@@ -1,6 +1,6 @@
 <suite name="Android Native" parallel="" thread-count="10" verbose="1">
     <tests>
-        <test name="Cheapoair Android">
+        <test name="Android Native">
             <classes>
                 <class name="AndroidNativePOC"/>
             </classes>
