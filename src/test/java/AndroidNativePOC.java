@@ -29,8 +29,16 @@ public class AndroidNativePOC {
     }
 
     @Test
-    public void sampleTestCase() throws MalformedURLException {
+    public void sampleTestCase() throws MalformedURLException, InterruptedException {
        // this.driver = driverFactory.getDriver();
+        driver.findElementByXPath("//*[@text='Views']").click();
+        Thread.sleep(2000);
+        driver.findElementByXPath("//*[@text='Chronometer']").click();
+        Thread.sleep(1000);
+        driver.findElementByXPath("//*[@text='Start']").click();
+        Thread.sleep(4000);
+        driver.findElementByXPath("//*[@text='Stop']").click();
+        Thread.sleep(1000);
 
         System.out.println("Inside AndroidNativeTestCase");
     }
