@@ -17,7 +17,7 @@ public class AndroidWebPOC {
 
 
     DriverFactory driverFactory;
-    public static AppiumDriver<MobileElement> driver=null;
+    public static AppiumDriver driver=null;
     public WebDriverWait mywait;
 
 

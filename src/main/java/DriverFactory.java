@@ -1,10 +1,8 @@
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -18,7 +16,7 @@ public class DriverFactory {
     public static DesiredCapabilities capabilities=null;
     public static GlobalProperties globalProperties = null;
     public static PropertiesFileReader propertiesFileReader = null;
-    public static AppiumDriver<MobileElement> driver;
+    public static AppiumDriver driver;
     public static URL url;
     public File androidNativeappPath;
     public File IOSNativeappPath;
@@ -33,16 +31,16 @@ public class DriverFactory {
     }
 
 
-    public AppiumDriver<MobileElement> getDriver() throws MalformedURLException {
+    public AppiumDriver getDriver() throws MalformedURLException {
         setAppPath();
         if(GlobalProperties.getPropertyMap().get("AUT").equalsIgnoreCase("androidnative")){
-            driver = new AndroidDriver<MobileElement>(url,getAndroidNativeCapabilities(capabilities));
+            driver = new AndroidDriver(url,getAndroidNativeCapabilities(capabilities));
         }else if(GlobalProperties.getPropertyMap().get("AUT").equalsIgnoreCase("androidweb")){
-            driver = new AndroidDriver<MobileElement>(url,getAndroidWebCapabilities(capabilities));
+            driver = new AndroidDriver(url,getAndroidWebCapabilities(capabilities));
         }else if(GlobalProperties.getPropertyMap().get("AUT").equalsIgnoreCase("iosnative")){
-            driver = new IOSDriver<MobileElement>(url,getIOSNativeCapabilities(capabilities));
+            driver = new IOSDriver(url,getIOSNativeCapabilities(capabilities));
         }else if(GlobalProperties.getPropertyMap().get("AUT").equalsIgnoreCase("iosweb")){
-            driver = new IOSDriver<MobileElement>(url,getIOSWebCapabilities(capabilities));
+            driver = new IOSDriver(url,getIOSWebCapabilities(capabilities));
         }
         return driver;
     }
@@ -79,7 +77,7 @@ public class DriverFactory {
 
     private DesiredCapabilities getAndroidWebCapabilities(DesiredCapabilities capabilities){
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,GlobalProperties.getPropertyMap().get("androidPlatformVersion"));
-        capabilities.setCapability(MobileCapabilityType.PLATFORM, "Android");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Emulator");
         capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
         return capabilities;

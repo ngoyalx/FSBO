@@ -1,16 +1,10 @@
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import jdk.nashorn.internal.objects.Global;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by ngoyal on 21/09/17.
@@ -18,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class AndroidNativePOC {
 
     DriverFactory driverFactory;
-    public AppiumDriver<MobileElement> driver=null;
+    public AppiumDriver driver=null;
     public WebDriverWait mywait;
 
 
