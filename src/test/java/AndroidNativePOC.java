@@ -33,12 +33,12 @@ public class AndroidNativePOC {
        // this.driver = driverFactory.getDriver();
         driver.findElementByXPath("//*[@text='Views']").click();
         Thread.sleep(2000);
-        driver.findElementByXPath("//*[@text='Chronometer']").click();
-        Thread.sleep(1000);
-        driver.findElementById("com.example.android.apis:id/start").click();
+        driver.findElementByXPath("//*[@text='Buttons']").click();
         Thread.sleep(4000);
-        driver.findElementById("com.example.android.apis:id/stop").click();
-        Thread.sleep(1000);
+        driver.findElementByXPath("//*[@text='OFF']").click();
+        Thread.sleep(2000);
+        //driver.findElementById("com.example.android.apis:id/stop").click();
+        //Thread.sleep(1000);
 
         System.out.println("Inside AndroidNativeTestCase");
     }
