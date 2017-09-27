@@ -35,9 +35,9 @@ public class AndroidNativePOC {
         Thread.sleep(2000);
         driver.findElementByXPath("//*[@text='Chronometer']").click();
         Thread.sleep(1000);
-        driver.findElementByXPath("//*[@text='Start']").click();
+        driver.findElementById("com.example.android.apis:id/start").click();
         Thread.sleep(4000);
-        driver.findElementByXPath("//*[@text='Stop']").click();
+        driver.findElementById("com.example.android.apis:id/stop").click();
         Thread.sleep(1000);
 
         System.out.println("Inside AndroidNativeTestCase");
