@@ -54,6 +54,8 @@ public class GlobalProperties {
                 + FileSeperator.get() + "main" + FileSeperator.get() + "resources" + FileSeperator.get()
                 + "apps" + FileSeperator.get());
 
+        //remoteAppDir = new File("/Users/arpitgupta/Desktop/nitin/");
+
         localAppDir = new File(System.getProperty("user.dir") + FileSeperator.get() + "src"
                 + FileSeperator.get() + "main" + FileSeperator.get() + "resources" + FileSeperator.get()
                 + "apps" + FileSeperator.get());

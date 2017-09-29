@@ -72,6 +72,7 @@ public class DriverFactory {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         capabilities.setCapability(MobileCapabilityType.APP,androidNativeappPath.getAbsolutePath());
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Emulator");
+        //capabilities.setCapability(MobileCapabilityType.ORIENTATION,"landscape");
         return capabilities;
     }
 
