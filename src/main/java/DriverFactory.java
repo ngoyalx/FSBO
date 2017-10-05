@@ -125,7 +125,7 @@ public class DriverFactory {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, GlobalProperties.getPropertyMap().get("iosPlatformVersion"));
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ios");
         capabilities.setCapability(MobileCapabilityType.APP,"sauce-storage:UICatalogSauce.zip");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 6 Simulator");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 7 Simulator");
         return capabilities;
     }
 
@@ -140,7 +140,7 @@ public class DriverFactory {
     private DesiredCapabilities getIOSWebSauceLabCapabilities(DesiredCapabilities capabilities){
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, GlobalProperties.getPropertyMap().get("iosPlatformVersion"));
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ios");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone 6 Simulator");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone 7 Simulator");
         capabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"Safari");
         return capabilities;
     }
